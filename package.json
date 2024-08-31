@@ -1,0 +1,36 @@
+{
+  "name": "imversion-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/src/index.js",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --verbose --colors --coverage  --forceExit",
+    "test:dev": "cross-env NODE_ENV=test jest --detectOpenHandles --verbose --colors",
+    "dev": "cross-env TS_NODE_BASEURL=./dist/src npx tsc-watch --onSuccess \"node -r tsconfig-paths/register ./dist/src/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0",
+    "reflect-metadata": "^0.2.2",
+    "tsc-watch": "^6.2.0",
+    "tsconfig-paths": "^4.2.0",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.1",
+    "env-cmd": "^10.1.0",
+    "jest": "^29.7.0",
+    "sqlite3": "^5.1.7",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "description": ""
+}
