@@ -7,7 +7,8 @@
     "start": "npm run compile && node ./dist/src/index.js",
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles --verbose --colors --coverage  --forceExit",
     "test:dev": "cross-env NODE_ENV=test jest --detectOpenHandles --verbose --colors",
-    "dev": "cross-env TS_NODE_BASEURL=./dist/src npx tsc-watch --onSuccess \"node -r tsconfig-paths/register ./dist/src/index.js\""
+    "dev": "cross-env TS_NODE_BASEURL=./dist/src npx tsc-watch --onSuccess \"node -r tsconfig-paths/register ./dist/src/index.js\"",
+    "seed": "ts-node src/database/seeds/index.ts"
   },
   "keywords": [],
   "author": "",
